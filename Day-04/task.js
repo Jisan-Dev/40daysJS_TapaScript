@@ -17,3 +17,25 @@ if (amount % 100 === 0) {
 } else {
   console.log("Invalid amount");
 }
+
+// Build a Calculator with switch-case
+const n1 = 10;
+const n2 = 20;
+const operator = "/";
+
+switch (operator) {
+  case "+":
+    console.log(n1 + n2);
+    break;
+  case "-":
+    console.log(n1 - n2);
+    break;
+  case "*":
+    console.log(n1 * n2);
+    break;
+  case "/":
+    console.log(n1 / n2);
+    break;
+  default:
+    console.log("Invalid operator");
+}
