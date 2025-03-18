@@ -45,3 +45,15 @@ console.log("[yearly cost before discount]", yearlyCost);
 
 const yearlyCostAfterDiscount = yearlyCost - yearlyCost * 0.2;
 console.log("[yearly cost after discount]", yearlyCostAfterDiscount);
+
+// 6. Leap Year Checker. Is 2025 a Leap Year?
+const year = 1816;
+if (year % 4 === 0) {
+  if (year % 100 !== 0 || year % 400 === 0) {
+    console.log(year + " is a leap year");
+  } else {
+    console.log(year + " is not a leap year");
+  }
+} else {
+  console.log(year + " is not a leap year");
+}
