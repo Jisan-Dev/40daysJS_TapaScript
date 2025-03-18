@@ -1,5 +1,5 @@
 // 1. Odd or Even
-const number = 1;
+const number = 2;
 if (number % 2 === 0) {
   console.log(number + " is an even number");
 } else {
