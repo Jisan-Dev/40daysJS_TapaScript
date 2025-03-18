@@ -45,3 +45,8 @@ for (let i = 1; i <= 5; i++) {
   if (i === 3) continue;
   console.log(i);
 }
+
+// Multiple counters or a single loop
+for (let i = 1, j = 10; i <= 10 && j >= 1; i++, j--) {
+  console.log("ascending", i, "descending", j);
+}
