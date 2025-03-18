@@ -50,3 +50,16 @@ for (let i = 1; i <= 5; i++) {
 for (let i = 1, j = 10; i <= 10 && j >= 1; i++, j--) {
   console.log("ascending", i, "descending", j);
 }
+
+// While Loop
+// “A while loop runs as long as a given condition is true. It’s best when we don’t know in advance how many iterations are needed.”
+/*
+ while(condition) {
+    // Code
+ }
+*/
+let counter = 1;
+while (counter <= 5) {
+  console.log(counter);
+  counter++;
+}
