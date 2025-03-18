@@ -59,7 +59,37 @@ for (let i = 1, j = 10; i <= 10 && j >= 1; i++, j--) {
  }
 */
 let counter = 1;
+
 while (counter <= 5) {
   console.log(counter);
   counter++;
 }
+
+console.log("-----------------");
+
+// do-while
+// “A do-while loop ensures that the code executes at least once before checking the condition.”
+/*
+    do {
+        // Code
+    } while(condition);
+*/
+let num = 0;
+
+do {
+  console.log(num);
+  num++;
+} while (num <= 5);
+
+// ----------------------------------------------------------
+
+// infinite loops ~
+for (;;) {
+  console.log("I am looping forever!!!");
+}
+
+while (true) {}
+
+do {
+  // Code
+} while (true);
