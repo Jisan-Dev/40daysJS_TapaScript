@@ -11,10 +11,10 @@ Please complete the following tasks and post them on the tapaScript Discord unde
 
 ## 2. Do you have a Driving License?
 
-Let's check if you are eligible to get a driving license. The eligibility to get a driving licence is 18 years.
+Let's check if you are eligible to get a driving license. The eligibility to get a driving license is 18 years.
 
 - [ ] Manage `age` as a variable.
-- [ ] Check if the age is elligible for a driving license and print it on the console accordingly.
+- [ ] Check if the age is eligible for a driving license and print it on the console accordingly.
 
 ## 3. Calculate CTC with a Bonus
 
@@ -29,7 +29,7 @@ Let's calculate how much you earn from your office.
 Red Light... Green Light... Let's Play!
 
 - [ ] Create a `color` variable.
-- [ ] Based on the color variable's value print in the console if a traveller needs to STOP or GO. The Red color is for STOP and the Green color is for GO.
+- [ ] Based on the color variable's value print in the console if a traveler needs to STOP or GO. The Red color is for STOP and the Green color is for GO.
 
 ## 5. Create an Electricity Bill Calculator
 
@@ -53,7 +53,7 @@ Find the max number from the lot.
 - [ ] Take three numbers and assign them to variables p, q, and r.
 - [ ] Now find the maximum of these three numbers using the comparison operators.
 
-## 8. Biwise Doubling
+## 8. Bitwise Doubling
 
 A tricky one for you
 

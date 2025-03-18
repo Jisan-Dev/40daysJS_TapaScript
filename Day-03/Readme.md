@@ -3,7 +3,7 @@
 ## **🎯 Goal of This Lesson**
 
 - What are Operands, Operators, Expressions?
-- What are difefrent types of Operators?
+- What are different types of Operators?
 - Arithmetic Operators
 - Assignment Operators
 - Comparison Operators
