@@ -57,3 +57,15 @@ if (year % 4 === 0) {
 } else {
   console.log(year + " is not a leap year");
 }
+
+// Max of Three Numbers
+const p = 18;
+const q = 13;
+const r = 14;
+if (p > q && p > r) {
+  console.log("P is greater than Q and R");
+} else if (q > p && q > r) {
+  console.log("Q is greater than P and R");
+} else {
+  console.log("R is greater than P and Q");
+}
