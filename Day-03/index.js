@@ -32,3 +32,16 @@ switch (color) {
     console.log("GO!");
     break;
 }
+
+// 5. Create an Electricity Bill Calculator
+const units = 12; // each day usage
+const eachUnitCost = 150;
+
+const perMonthCost = units * eachUnitCost * 30;
+console.log("[per month cost]", perMonthCost);
+
+const yearlyCost = perMonthCost * 12;
+console.log("[yearly cost before discount]", yearlyCost);
+
+const yearlyCostAfterDiscount = yearlyCost - yearlyCost * 0.2;
+console.log("[yearly cost after discount]", yearlyCostAfterDiscount);
