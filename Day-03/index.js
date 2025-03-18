@@ -75,3 +75,17 @@ if (p > q && p > r) {
 } else {
   console.log("R is greater than P and Q");
 }
+
+// ! Bitwise Doubling
+/*
+A tricky one for you
+
+-> Create a variable count and assign a value, say, 5.
+-> Now use the Bitwise shift operator to make the number double.
+-> Print it on the console.
+ */
+let count = 5; //101 (binary/ bitwise representation)
+count = count << 1; // 1010 = 0 * (2 ** 0) + 1 * (2 ** 1) + 0 * (2 ** 2) + 1 * (2 ** 3) = 10
+console.log(count);
+// 5/2 = 2 (1)
+// 2/2 = 1 (0)  101
