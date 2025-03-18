@@ -39,3 +39,14 @@ switch (operator) {
   default:
     console.log("Invalid operator");
 }
+
+// 4. Pay for your movie ticket
+let age = 68;
+
+if (age < 18) {
+  console.log("The price of the ticket is $3");
+} else if (age >= 18 && age <= 60) {
+  console.log("The price of the ticket is $10");
+} else {
+  console.log("The price of the ticket is $8");
+}
