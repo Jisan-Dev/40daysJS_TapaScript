@@ -5,3 +5,11 @@ if (number % 2 === 0) {
 } else {
   console.log(number + " is an odd number");
 }
+
+// 2. Do you have a Driving License?
+const age = 2;
+if (age >= 18) {
+  console.log("You are eligible");
+} else {
+  console.log("You are not eligible");
+}
