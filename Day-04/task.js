@@ -50,3 +50,58 @@ if (age < 18) {
 } else {
   console.log("The price of the ticket is $8");
 }
+
+// 5. Horoscope Sign Checker
+const birthMonth = "July";
+switch (birthMonth) {
+  case "March":
+  case "April":
+    console.log("Aries");
+    break;
+  case "April":
+  case "May":
+    console.log("Taurus");
+    break;
+  case "May":
+  case "June":
+    console.log("Gemini");
+    break;
+  case "June":
+  case "July":
+    console.log("Cancer");
+    break;
+  case "July":
+  case "August":
+    console.log("Leo");
+    break;
+  case "August":
+  case "September":
+    console.log("Virgo");
+    break;
+  case "September":
+  case "October":
+    console.log("Libra");
+    break;
+  case "October":
+  case "November":
+    console.log("Scorpio");
+    break;
+  case "November":
+  case "December":
+    console.log("Sagittarius");
+    break;
+  case "December":
+  case "January":
+    console.log("Capricorn");
+    break;
+  case "January":
+  case "February":
+    console.log("Aquarius");
+    break;
+  case "February":
+  case "March":
+    console.log("Pisces");
+    break;
+  default:
+    console.log("Invalid month");
+}
