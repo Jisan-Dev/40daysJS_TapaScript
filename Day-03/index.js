@@ -47,7 +47,7 @@ const yearlyCostAfterDiscount = yearlyCost - yearlyCost * 0.2;
 console.log("[yearly cost after discount]", yearlyCostAfterDiscount);
 
 // 6. Leap Year Checker. Is 2025 a Leap Year?
-const year = 1816;
+const year = 2023;
 if (year % 4 === 0) {
   if (year % 100 !== 0 || year % 400 === 0) {
     console.log(year + " is a leap year");
@@ -57,8 +57,14 @@ if (year % 4 === 0) {
 } else {
   console.log(year + " is not a leap year");
 }
+//do the same using ternary operator
+year % 4 === 0
+  ? year % 100 !== 0 || year % 400 === 0
+    ? console.log(year + " is a leap year")
+    : console.log(year + " is not a leap year")
+  : console.log(year + " is not a leap year");
 
-// Max of Three Numbers
+// 7. Max of Three Numbers
 const p = 18;
 const q = 13;
 const r = 14;
