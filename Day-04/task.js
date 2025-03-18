@@ -105,3 +105,16 @@ switch (birthMonth) {
   default:
     console.log("Invalid month");
 }
+
+// 6. Which Triangle?
+let sideA = 5;
+let sideB = 3;
+let sideC = 9;
+
+if (sideA === sideB && sideB === sideC) {
+  console.log("Equilateral triangle");
+} else if (sideA === sideB || sideB === sideC || sideA === sideC) {
+  console.log("Isosceles triangle");
+} else {
+  console.log("Scalene triangle");
+}
