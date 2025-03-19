@@ -14,7 +14,7 @@ Please complete the following tasks and post them on the tapaScript Discord unde
 * * * * *
 ```
 
-## 2. Craete Multiplication Table (Using for loop)
+## 2. Create Multiplication Table (Using for loop)
 
 Write a program to print the multiplication table of a given number up to 10.
 For Example: If N = 3, output should be:
