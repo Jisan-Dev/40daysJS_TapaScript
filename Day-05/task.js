@@ -49,9 +49,11 @@ let input = 6789;
 let reversed = 0;
 
 while (input > 0) {
-  let digit = input % 10;
-  reversed = reversed * 10 + digit;
-  input = Math.floor(input / 10);
+  let digit = input % 10; // get the last digit.modulo 10 (%10) gives us the last digit of a decimal number
+
+  reversed = reversed * 10 + digit; // append the digit to the reversed number. Multiplying reversed with 10 so that it always keep a placeholder at the right side (0) and then when adding it with the extracted number, the extracted number will take the place of 0 (eg. 9'0' => 9'8'...)
+
+  input = Math.floor(input / 10); // removing the last digit from the input with Math.floor so that we get to the point when input will be 0 and the loop will be finished.
 }
 console.log(reversed);
 
