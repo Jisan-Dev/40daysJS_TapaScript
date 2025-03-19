@@ -43,4 +43,4 @@ Input: 6789
 Output: 9876
 ```
 
-## 6. Write your understanding on the difefrences between for, while, and do-while loop. Create their flow charts.
+## 6. Write your understanding on the differences between for, while, and do-while loop. Create their flow charts.
