@@ -38,3 +38,21 @@ for (let i = 1; i <= 20; i++) {
   }
   console.log(i);
 }
+
+// 5. Write a program to reverse the digits of a given number using a while loop.
+/*
+Example:
+Input: 6789
+Output: 9876
+*/
+let input = 6789;
+let reversed = 0;
+
+while (input > 0) {
+  let digit = input % 10;
+  reversed = reversed * 10 + digit;
+  input = Math.floor(input / 10);
+}
+console.log(reversed);
+
+//
