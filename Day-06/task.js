@@ -97,3 +97,8 @@ function capitalizeFirstLetter(str) {
   return transformedSentence;
 }
 console.log(capitalizeFirstLetter("hello world"));
+
+// 7. Use an IIFE to Print “Hello, JavaScript!”
+(function (name) {
+  console.log("Hello," + " " + name);
+})("JavaScript");
