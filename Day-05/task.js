@@ -58,3 +58,4 @@ while (input > 0) {
 console.log(reversed);
 
 //TODO: Task no.6 : Write your understanding on the differences between for, while, and do-while loop. Create their flow charts.
+// goto("./loops_flowchart.png");
