@@ -27,3 +27,13 @@ function isPalindrome(str) {
   }
 }
 console.log(isPalindrome("madam"));
+
+// 4. Write a Function to Find Factorial of a Number
+function factorial(num) {
+  let result = 1;
+  for (let i = num; i > 0; i--) {
+    result *= i;
+  }
+  return result;
+}
+console.log(factorial(5));
