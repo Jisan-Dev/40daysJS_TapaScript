@@ -13,3 +13,17 @@ function findMax(num1, num2) {
   }
 }
 console.log(findMax(10, 5));
+
+// 3. Function to Check if a String is a Palindrome using for loop
+function isPalindrome(str) {
+  let reversed = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  if (str === reversed) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isPalindrome("madam"));
