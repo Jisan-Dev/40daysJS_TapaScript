@@ -37,3 +37,22 @@ function factorial(num) {
   return result;
 }
 console.log(factorial(5));
+
+//5. Write a function to Count Vowels in a String
+function countVowels(str) {
+  let vowelsInStr = "";
+  for (let i = 0; i < str.length; i++) {
+    switch (str[i].toLowerCase()) {
+      case "a":
+      case "e":
+      case "i":
+      case "o":
+      case "u":
+        vowelsInStr += str[i];
+        break;
+    }
+  }
+  console.log(`The number of vowels inside "${str}" is ${vowelsInStr.length} and they are '${vowelsInStr}'`);
+}
+
+countVowels("Hello World");
