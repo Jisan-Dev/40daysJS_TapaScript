@@ -115,3 +115,6 @@ function cb(name) {
 }
 
 greet("John", cb);
+
+// TODO: Task 9 & 10 : Create Call Stack Execution Diagram for this flow
+// goto(./CallstackExecutionDiagrams_day06_task9&10.png)
