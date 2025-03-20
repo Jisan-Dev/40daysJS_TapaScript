@@ -56,3 +56,44 @@ function countVowels(str) {
 }
 
 countVowels("Hello World");
+
+// 6. Write a Function to Capitalize the First Letter of Each Word in a Sentence
+// function capitalizeFirstLetter(str) {
+//   let transformedSentence = "";
+//   for (let i = 0; i < str.length; i++) {
+//     if (i === 0) {
+//       transformedSentence += str[i].toUpperCase();
+//       continue;
+//     }
+
+//     if (str[i] === " ") {
+//       transformedSentence += " " + str[i + 1].toUpperCase();
+//       i++;
+//       continue;
+//     }
+
+//     transformedSentence += str[i];
+//   }
+//   return transformedSentence;
+// }
+// console.log(capitalizeFirstLetter("hello world"));
+
+// another way to do the above thing
+function capitalizeFirstLetter(str) {
+  let transformedSentence = "";
+  let capitalizeNext = true;
+  for (let i = 0; i < str.length; i++) {
+    if (capitalizeNext) {
+      transformedSentence += str[i].toUpperCase();
+      capitalizeNext = false;
+    } else {
+      transformedSentence += str[i];
+    }
+
+    if (i === " ") {
+      capitalizeNext = true;
+    }
+  }
+  return transformedSentence;
+}
+console.log(capitalizeFirstLetter("hello world"));
