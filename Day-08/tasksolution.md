@@ -1,4 +1,4 @@
-# Global Execution Context(GCE) & Function Execution Context with its two phases by which it executes a program, "creation phase" and "execution phase solve".
+# Global Execution Context(GCE) & Function Execution Context with its two phases by which it executes a program, "creation phase" and "execution phase".
 
 ## This image demonstrates how javascript execution happens when the code runs
 
