@@ -11,3 +11,15 @@ function outer() {
 outer();
 // ans : Bob
 // because at the time of FEC of outer function user variable's value is "Bob" which we are trying to log inside from the inner function. Inner func will first check if it has any variable called user in its own scope. When it won't find the user variable inside it's own block, it will start looking for its immediate outer block because of scope chaining, then it will find the variable user with its value "Bob" from that outer block scope.
+
+// 2. What is the mistake in the code below?
+let total = 0; // Global, bad practice
+
+function add(num) {
+  total += num;
+}
+
+add(5);
+add(10);
+console.log(total);
+// Answer : 15 , code is ok
