@@ -34,3 +34,13 @@ function parent() {
 }
 parent();
 // Ans : Istiak Kashem Jisan
+
+// 4. Use a loop inside a function and declare a variable inside the loop. Can you access it outside?
+function sayName() {
+  for (let i = 0; i <= 10; i++) {
+    let name = "Istiak Jisan";
+  }
+}
+sayName();
+console.log(name); // Reference Error
+//Reason: when we declare variable using let and const it cant be accessed outside because they're block scoped
