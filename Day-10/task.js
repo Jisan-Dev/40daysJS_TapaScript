@@ -54,3 +54,9 @@ function outer() {
   inner();
 }
 outer();
+
+// 6. What will be the output and why?
+// console.log(a); // Reference Error
+// let a = 10;
+
+// reason  we can't access let and const variable before initialization and at the time of execution phase  it falls into TDZ hence resulting to reference error
