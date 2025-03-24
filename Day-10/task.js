@@ -60,3 +60,9 @@ outer();
 // let a = 10;
 
 // reason  we can't access let and const variable before initialization and at the time of execution phase  it falls into TDZ hence resulting to reference error
+
+// 7. Where is the age variable accessible?
+function showAge() {
+  let age = 25; // only inside this block this age variable is accessible
+  console.log(age); // only inside this block this age variable is accessible
+}
