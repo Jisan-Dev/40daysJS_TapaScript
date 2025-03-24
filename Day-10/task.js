@@ -44,3 +44,13 @@ function sayName() {
 sayName();
 console.log(name); // Reference Error
 //Reason: when we declare variable using let and const it cant be accessed outside because they're block scoped
+
+// 5. Write a function that tries to access a variable declared inside another function.
+function outer() {
+  let color = "Black";
+  function inner() {
+    console.log(color);
+  }
+  inner();
+}
+outer();
