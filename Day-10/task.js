@@ -66,3 +66,17 @@ function showAge() {
   let age = 25; // only inside this block this age variable is accessible
   console.log(age); // only inside this block this age variable is accessible
 }
+
+function outer() {
+  let message = "Hi";
+
+  function inner() {
+    console.log(message);
+  }
+
+  inner();
+}
+
+outer();
+// Ans : Hi
+// Reason : when we declare global variable and inside function variable first priority is inside function variable, when function variable not available then access global variable ,due to scope chaining, this is call variable shadowing
