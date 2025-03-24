@@ -80,3 +80,22 @@ function outer() {
 outer();
 // Ans : Hi
 // Reason : when we declare global variable and inside function variable first priority is inside function variable, when function variable not available then access global variable ,due to scope chaining, this is call variable shadowing
+
+// 9. What will be the output and why?
+let x = "Global";
+
+function outer() {
+  let x = "Outer";
+
+  function inner() {
+    let x = "Inner";
+    console.log(x);
+  }
+
+  inner();
+}
+
+outer();
+
+// Ans : Inner
+// reason : when we declare global variable, then function variable then or nested function, variable first accessible to nested func/scope, if not available then check outer function/scope to find that variable, if not available then access global variable. (scope chaining)
