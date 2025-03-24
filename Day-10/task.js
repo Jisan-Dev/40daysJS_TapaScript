@@ -99,3 +99,18 @@ outer();
 
 // Ans : Inner
 // reason : when we declare global variable, then function variable then or nested function, variable first accessible to nested func/scope, if not available then check outer function/scope to find that variable, if not available then access global variable. (scope chaining)
+
+// 10. What will be the output and why?
+function counter() {
+  let count = 0;
+  return function () {
+    count--;
+    console.log(count);
+  };
+}
+
+const reduce = counter();
+reduce(); // -1
+reduce(); // -2
+
+// reason : when we declare or return function from inside another function, inner function can access any variable of outer function and use them
