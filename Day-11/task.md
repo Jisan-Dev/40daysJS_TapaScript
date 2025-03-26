@@ -42,4 +42,4 @@ console.log(testClosure()());
 - 3. The object is automatically cloned
 - 4. None of the Above.
 
-## 6. Write a function factory of counter to increment, decrement, and reset a counter. Use closure to refer the count value across the functuions.
+## 6. Write a function factory of counter to increment, decrement, and reset a counter. Use closure to refer the count value across the functions.

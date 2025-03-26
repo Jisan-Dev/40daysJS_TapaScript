@@ -54,3 +54,30 @@ multiply(10);
 
 // Ans : 02. The object remains in memory as long as the closure exists
 //Closures in JavaScript "capture" variables from their surrounding lexical scope. If a closure references an object, that object is not garbage collected as long as the closure (or any function that uses the closure) is still accessible. This can sometimes lead to memory leaks if references to closures persist unnecessarily.
+
+// 6. Write a function factory of counter to increment, decrement, and reset a counter. Use closure to refer the count value across the functions.
+
+const counterFactory = () => {
+  let count = 0;
+  return {
+    increment: () => {
+      count++;
+      console.log("postIncrement:", count);
+    },
+    decrement: () => {
+      count--;
+      console.log("postDecrement:", count);
+    },
+    reset: () => {
+      count = 0;
+      console.log("postReset:", count);
+    },
+  };
+};
+
+let counter1 = counterFactory();
+counter1.increment(); //1
+counter1.increment(); //2
+counter1.increment(); //3
+counter1.decrement(); //2
+counter1.reset(); //0
