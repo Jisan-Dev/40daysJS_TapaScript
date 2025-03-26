@@ -44,3 +44,13 @@ function createMultiplier(multiplier) {
 
 const multiply = createMultiplier(10);
 multiply(10);
+
+// 5. What happens if a closure references an object?
+
+// 01. The object is garbage collected immediately
+// 02. The object remains in memory as long as the closure exists
+// 03. The object is automatically cloned
+// 04. None of the Above.
+
+// Ans : 02. The object remains in memory as long as the closure exists
+//Closures in JavaScript "capture" variables from their surrounding lexical scope. If a closure references an object, that object is not garbage collected as long as the closure (or any function that uses the closure) is still accessible. This can sometimes lead to memory leaks if references to closures persist unnecessarily.
