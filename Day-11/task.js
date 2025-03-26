@@ -33,3 +33,14 @@ function buttonClick() {
 }
 
 buttonClick();
+
+// 4. Write a function createMultiplier(multiplier) that returns another function to multiply numbers.
+
+function createMultiplier(multiplier) {
+  return function (number) {
+    console.log(number * multiplier);
+  };
+}
+
+const multiply = createMultiplier(10);
+multiply(10);
