@@ -40,3 +40,35 @@ const {
 } = person;
 console.log(firstName, city, company);
 //_______________________________________________________________
+
+// 4. Build a Student Management System
+// - Store student details in an object (name, age, grades).
+// - Implement a method to calculate the average grade.
+
+const studentManagementSystem = {
+  name: "Hassan",
+  age: 19,
+  grades: {
+    math: 90,
+    physics: 80,
+    english: 100,
+  },
+  calcAverage() {
+    let sum = 0;
+    const totalSubs = Object.entries(this.grades).length;
+    console.log("sum:", sum, "totalSubs:", totalSubs);
+
+    // for (let key in this.grades) {
+    //   sum += this.grades[key];
+    // }
+
+    for (let [_, grade] of Object.entries(this.grades)) {
+      sum += grade;
+    }
+    // both the above ways works
+
+    console.log(`The average grade is ${sum / totalSubs}`);
+  },
+};
+
+studentManagementSystem.calcAverage();
