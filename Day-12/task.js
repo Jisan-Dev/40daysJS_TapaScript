@@ -156,3 +156,69 @@ console.log(personName.name); // 'Doe'
     so personName was copied to newPerson object that means they will be same. if you change 
     newPerson object the personName object will also be changed.
 */
+//________________________________________________
+
+// 9. What’s the best way to deeply copy a nested object? Explain with examples
+
+/*
+  SOLUTION :
+    the best way of making deep clone for nested objects is using structuredClone method .
+*/
+
+//Example
+
+const obj3 = {
+  a: 1,
+  b: { c: 2 },
+};
+const obj4 = Object.assign({}, obj3);
+// console.log(obj4); // {a: 1, b: {c: 2}}
+
+// obj4.b.c = 3;
+// obj4.a = 100;
+
+// console.log(obj4.a); // 100
+// console.log(obj3.a); // 1
+
+// console.log(obj4.b.c) // 3
+// console.log(obj3.b.c) // 3
+// because of shallow copy, the nested copy's reference got copied hence it has mutate the original object
+
+//deep copy
+const obj5 = structuredClone(obj3);
+// console.log(obj5); //{ a: 1, b: { c: 2 } }
+
+obj5.a = 100;
+obj5.b.c = 200;
+console.log(obj5.a); //100
+console.log(obj3.a); //1
+
+console.log(obj5.b.c); //200
+console.log(obj3.b.c); //2
+// so to make deep clone use structuredClone function. it allows to clone the deeply nested objects
+
+//______________________________________________________________
+
+// 10. Loop and print values using Object destructuring
+
+const userInfo = [
+  {
+    name: "Alex",
+    address: "15th Park Avenue",
+    age: 43,
+  },
+  {
+    name: "Bob",
+    address: "Canada",
+    age: 53,
+  },
+  {
+    name: "Carl",
+    address: "Bangalore",
+    age: 26,
+  },
+];
+
+for (const { name, address, age } of userInfo) {
+  console.log("=>", name, address, age);
+}

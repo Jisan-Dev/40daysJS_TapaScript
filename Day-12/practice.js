@@ -130,7 +130,7 @@ const obj4 = Object.assign({}, obj3);
 
 // console.log(obj4.b.c) // 3
 // console.log(obj3.b.c) // 3
-// because of shallow copy, the nested copy's reference got copied hence mutating the original object
+// because of shallow copy, the nested copy's reference got copied hence it has mutate the original object
 
 //deep copy
 const obj5 = structuredClone(obj3);
