@@ -138,3 +138,21 @@ bookStoreInventory.restockBooks("1984", 20);
   SOLUTION :
     i can check using "in" operator which returns true or false. eg:  ("property" in object)
 */
+
+// 8. What will be the output and why?
+
+const personName = {
+  name: "John",
+};
+
+const newPerson = personName;
+newPerson.name = "Doe";
+console.log(personName.name); // 'Doe'
+
+/*
+  SOLUTION : 
+    the output will be name property set to 'Doe',thats because
+    objects are reference type and we are pointing the newPersons's memory location to the personName's memory location that means if you copy it will share the same reference,
+    so personName was copied to newPerson object that means they will be same. if you change 
+    newPerson object the personName object will also be changed.
+*/
