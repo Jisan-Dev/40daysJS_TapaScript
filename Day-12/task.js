@@ -123,3 +123,18 @@ const bookStoreInventory = {
 
 bookStoreInventory.checkAvailability("1984");
 bookStoreInventory.restockBooks("1984", 20);
+
+// 6. What is the difference between Object.keys() and Object.entries()? Explain with examples
+
+/*
+  SOLUTION :
+    Object.keys : takes object and returns array which contains the object keys.
+    Object.entries : it returns arrays which contain key and value of the object that is passed.
+*/
+
+// 7. How do you check if an object has a certain property?
+
+/*
+  SOLUTION :
+    i can check using "in" operator which returns true or false. eg:  ("property" in object)
+*/
