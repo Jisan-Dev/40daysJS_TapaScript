@@ -72,3 +72,54 @@ const studentManagementSystem = {
 };
 
 studentManagementSystem.calcAverage();
+
+//______________________________________________________________
+// 5- Book Store Inventory System
+// - Store books in an object.
+// - Add functionality to check availability and restock books.
+
+const bookStoreInventory = {
+  books: {
+    book1: {
+      title: "To Kill a Mockingbird",
+      author: "Harper Lee",
+      quantity: 3,
+    },
+
+    book2: {
+      title: "1984",
+      author: "George Orwell",
+      quantity: 1,
+    },
+
+    book3: {
+      title: "The Alchemist",
+      author: "Paulo Coelho",
+      quantity: 10,
+    },
+  },
+
+  checkAvailability(bookTitle) {
+    for (let bookIdx in this.books) {
+      if (bookTitle === this.books[bookIdx].title) {
+        console.log(`This book '${bookTitle}' is available`);
+        return;
+      }
+    }
+    console.log(`This book '${bookTitle}' is not available`);
+  },
+
+  restockBooks(bookTitle, quantity) {
+    for (let [_bookIdx, book] of Object.entries(this.books)) {
+      if (bookTitle === book.title) {
+        book.quantity += quantity;
+        console.log(`'${bookTitle}' : was added another '${quantity}' books and the total available is '${book.quantity}'`);
+        return;
+      }
+    }
+    console.log(`'${bookTitle}' : is not valid! Enter a valid book title`);
+  },
+};
+
+bookStoreInventory.checkAvailability("1984");
+bookStoreInventory.restockBooks("1984", 20);
