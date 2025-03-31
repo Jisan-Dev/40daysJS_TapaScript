@@ -85,3 +85,17 @@ The issue here is with how this behaves inside the inner function.
 - to solve we can use arrow func as the inner function. cause in case of arrow function it takes from the parent scope of where it is lexically defined.
 - we can also bind the user while invoking inner func. for eg. inner.bind(this)(); // Bind `this` to `user` as we have the access of 'this' there.
  */
+
+//_______________________________________________________________________________________________
+
+//5.Create a `Sports` constructor function that takes `name` and `number of players` as arguments and assigns them using `this` keyword. Then, create two sports instances and log their details
+
+function Sports(name, totalPlayers) {
+  this.name = name;
+  this.totalPlayers = totalPlayers;
+}
+
+const cricket = new Sports("cricket", 11);
+console.log(cricket);
+const football = new Sports("football", 11);
+console.log(football);
