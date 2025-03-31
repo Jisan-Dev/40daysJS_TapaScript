@@ -99,3 +99,65 @@ const cricket = new Sports("cricket", 11);
 console.log(cricket);
 const football = new Sports("football", 11);
 console.log(football);
+
+//_______________________________________________________________________________________________
+
+//6.Can you attach the car1's `describe()` method to car2 object? Give all possible solutions that you can think of
+const car1 = {
+  brand: "Audi",
+  model: "A8",
+  describe: function () {
+    console.log(`This car is a ${this.brand} ${this.model}.`);
+  },
+};
+
+const car2 = {
+  brand: "BMW",
+  model: "X1",
+};
+//SOLUTION(q6):
+//1.Direct Assignment: You can directly assign car1.describe to car2.describe, so both objects share the same function reference.
+car2.describe = car1.describe;
+car2.describe(); // Logs: "This car is a BMW X1."
+
+//2. Using call(): The call() method allows you to invoke describe() while explicitly setting this to car2.
+car1.describe.call(car2); // Logs: "This car is a BMW X1."
+
+//3. Using apply(): apply() is similar to call(), but it takes arguments as an array.
+car1.describe.apply(car2); // Logs: "This car is a BMW X1."
+
+//4. Using bind(): bind() returns a new function with this permanently set to car2, so you can call it later.
+const describeCar2 = car1.describe.bind(car2);
+describeCar2(); //Logs: "This car is a BMW X1."
+
+//5. 5. Adding describe to car2 via Object.assign(): This copies the describe method from car1 to car2.
+Object.assign(car2, { describe: car1.describe });
+car2.describe();
+
+//6. Using Object.create(): This makes car2 inherit from car1, meaning it will have access to describe().
+const Car2 = Object.create(car1);
+console.log(Car2);
+console.log(Car2.__proto__);
+Car2.brand = "BMW"; //{}
+Car2.model = "X1"; //{ brand: 'Audi', model: 'A8', describe: [Function: describe] }
+Car2.describe(); // Logs: "This car is a BMW X1."
+console.log(Car2); //{ brand: 'BMW', model: 'X1' }
+
+/*// note
+-Object.create(car1) makes car1 the prototype of car2, but car2 itself starts empty.
+
+-Properties are inherited but not owned, so console.log(car2) appears empty.
+
+-To add properties to car2, you must assign them explicitly.
+*/
+
+/**
+ * Which Solution is Best?
+If you want both objects to have independent methods, use direct assignment (car2.describe = car1.describe).
+
+If you need a one-time invocation, use call() or apply().
+
+If you want a permanently bound function, use bind().
+
+If car2 should inherit from car1, use Object.create() or Object.setPrototypeOf().
+ */
