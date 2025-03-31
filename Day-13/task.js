@@ -61,3 +61,27 @@ const boundGreet = greetFn.bind(obj);
 boundGreet(); // Logs: "Hello, Tom!"
 
 //_______________________________________________________________________________________________
+
+//4. What is the problem with the following code? Why isn't it logging the name correctly?
+const user = {
+  name: "Alex",
+  greet: function () {
+    function inner() {
+      console.log(`Hello, ${this.name}!`);
+    }
+    inner();
+  },
+};
+
+user.greet();
+
+/*SOLUTION(q4): 
+The issue here is with how this behaves inside the inner function.
+-user.greet() is called, so inside greet(), this correctly refers to user.
+-However, inner() is a regular function (not an arrow function or a method) and is invoked normally (not as user.inner()).
+-In JavaScript, when a regular function is called, this defaults to undefined in strict mode ('use strict'). & The global object (window in browsers, global in Node.js) in non-strict mode.
+-Since this inside inner() does not refer to user, this.name becomes undefined, resulting in "Hello, undefined!"
+
+- to solve we can use arrow func as the inner function. cause in case of arrow function it takes from the parent scope of where it is lexically defined.
+- we can also bind the user while invoking inner func. for eg. inner.bind(this)(); // Bind `this` to `user` as we have the access of 'this' there.
+ */
