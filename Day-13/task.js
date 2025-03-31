@@ -11,7 +11,7 @@
  */
 /*SOLUTION(for q1): go to "./thisKeyword.png" */
 
-//__________________________________________________________________________________
+//!__________________________________________________________________________________
 
 //2.  What is the problem here? Fix it to log the correct name and explain the fix
 /*
@@ -27,7 +27,7 @@ user.greet();
 
 /*SOLUTION (for q2):: The reason we're getting undefined from ${this.name} is because as per the rules, if the 'this' keyword used inside a arrow func it always check in the parent scope of where the arrow function is lexically placed(lexical scope). to fix this we can use this console.log(`Hello, ${this.name}!`); inside another block like {console.log(`Hello, ${this.name}!`)} or we can convert the arrow function to normal traditional function "function(){console.log(`Hello, ${this.name}!`);}" */
 
-//_______________________________________________________________________________________________
+//!_______________________________________________________________________________________________
 
 //## 3. Can you explain what is the problem here and fix the issue to log the correct name?
 
@@ -60,7 +60,7 @@ greetFn.apply(obj); // Logs: "Hello, Tom!"
 const boundGreet = greetFn.bind(obj);
 boundGreet(); // Logs: "Hello, Tom!"
 
-//_______________________________________________________________________________________________
+//!_______________________________________________________________________________________________
 
 //4. What is the problem with the following code? Why isn't it logging the name correctly?
 const user = {
@@ -86,7 +86,7 @@ The issue here is with how this behaves inside the inner function.
 - we can also bind the user while invoking inner func. for eg. inner.bind(this)(); // Bind `this` to `user` as we have the access of 'this' there.
  */
 
-//_______________________________________________________________________________________________
+//!_______________________________________________________________________________________________
 
 //5.Create a `Sports` constructor function that takes `name` and `number of players` as arguments and assigns them using `this` keyword. Then, create two sports instances and log their details
 
@@ -100,7 +100,7 @@ console.log(cricket);
 const football = new Sports("football", 11);
 console.log(football);
 
-//_______________________________________________________________________________________________
+//!_______________________________________________________________________________________________
 
 //6.Can you attach the car1's `describe()` method to car2 object? Give all possible solutions that you can think of
 const car1 = {
@@ -115,6 +115,7 @@ const car2 = {
   brand: "BMW",
   model: "X1",
 };
+
 //SOLUTION(q6):
 //1.Direct Assignment: You can directly assign car1.describe to car2.describe, so both objects share the same function reference.
 car2.describe = car1.describe;
@@ -161,3 +162,31 @@ If you want a permanently bound function, use bind().
 
 If car2 should inherit from car1, use Object.create() or Object.setPrototypeOf().
  */
+
+//!_______________________________________________________________________________________________
+
+//7. What will be the output of the following code and why?
+const person = {
+  name: "Charlie",
+  sayHello: function () {
+    console.log(this.name);
+  },
+  sayHelloArrow: () => {
+    console.log(this.name);
+  },
+};
+
+person.sayHello();
+person.sayHelloArrow();
+/*
+Options are:
+
+- A: "Charlie" and "Charlie"
+- B: "Charlie" and undefined
+- C: "Charlie" and "" (empty string)
+- D: undefined and "Charlie"
+ */
+
+// SOLUTION(q7):
+// Ans : B: "Charlie" and undefined
+// reason : arrow function object method refer parent scope of the lexical scope of where it is placed and normal regular function refer as a same object when using as a method not as a standalone func.
