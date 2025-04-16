@@ -133,3 +133,22 @@ try {
 }
 
 //___________________________________________________________________________
+
+// 4. Simulate an API call function fetchData(url). If the URL does not start with "https",
+// throw an "Invalid URL" error. Handle it using try...catch
+
+function fetchData(url) {
+  if (!url.startsWith("https")) {
+    throw new Error("Invalid URL");
+  }
+  return "data";
+}
+
+try {
+  const data = fetchData("http://somethhkjs.com");
+  console.log(data);
+} catch (error) {
+  console.error(`${error.name}: ${error.message}`);
+}
+
+//___________________________________________________________________________
