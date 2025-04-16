@@ -30,3 +30,13 @@ function processPayment(amount) {
 }
 
 processPayment(-1000);
+
+//___________________________________________________________________________
+
+// 3. Implement a custom error handling system for an e-commerce website that categorizes errors as
+/**
+ * - UserError
+ * - PaymentError
+ * - ServerError
+ * - EmailError
+ */
