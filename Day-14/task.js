@@ -152,3 +152,27 @@ try {
 }
 
 //___________________________________________________________________________
+// 5. Implement a custom error type ValidationError using constructor functions to handle form validation errors
+
+function ValidationError(message) {
+  this.name = "ValidationError";
+  this.message = message;
+  this.stack = new Error().stack;
+}
+
+ValidationError.prototype = Object.create(Error.prototype);
+
+function validateUser(userInput) {
+  if (!userInput.username || userInput.username === "") {
+    throw new ValidationError("Username cannot be empty");
+  } else if (!userInput.age || userInput.age < 0 || !typeof userInput.age !== "number") {
+    throw new ValidationError("Age must be a positive number");
+  }
+}
+
+try {
+  const msg = validateUser({ username: "as", age: -2 });
+  console.log(msg);
+} catch (error) {
+  console.error(`${error.name}: ${error.message}`);
+}
