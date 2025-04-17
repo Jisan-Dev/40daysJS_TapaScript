@@ -202,3 +202,19 @@ function readFile(filePath) {
 }
 
 readFile(`DUsers\\Hassan\\Documents\\file.txt`);
+
+//___________________________________________________________________________
+
+// 7. Write a function parseJson(str) that takes a JSON string and tries to parse
+// it using JSON.parse().If parsing fails, catch the error and return "Invalid JSON"
+
+function parseJson(str) {
+  try {
+    return JSON.parse(str);
+  } catch (error) {
+    return `Invalid Json: ${error}`;
+  }
+}
+console.log(parseJson('{name:"hassan" }'));
+
+//___________________________________________________________________________
