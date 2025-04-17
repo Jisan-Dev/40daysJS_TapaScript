@@ -152,8 +152,8 @@ try {
 }
 
 //___________________________________________________________________________
-// 5. Implement a custom error type ValidationError using constructor functions to handle form validation errors
 
+// 5. Implement a custom error type ValidationError using constructor functions to handle form validation errors
 function ValidationError(message) {
   this.name = "ValidationError";
   this.message = message;
@@ -176,3 +176,29 @@ try {
 } catch (error) {
   console.error(`${error.name}: ${error.message}`);
 }
+
+//___________________________________________________________________________
+
+// 6. Write a function readFile(filePath) that simulates reading a file.
+// If the file does not exist (simulate with a condition), throw a "File not found" error.
+// Handle the error with try...catch.
+// Make sure you have code to handle releasing the IO resources
+
+// Please note, you do not have to implement the actual IO operation here.
+// Just use the console.log to simulate them. {NB}
+
+function readFile(filePath) {
+  console.log("File path checking started .......");
+  try {
+    if (filePath === "" || !(filePath.startsWith("C:") || filePath.startsWith("D:"))) {
+      throw new Error("File was not found");
+    }
+    console.log("File found");
+  } catch (error) {
+    console.error(`${error.name} ${error.stack}`);
+  } finally {
+    console.log("File path checking completed");
+  }
+}
+
+readFile(`DUsers\\Hassan\\Documents\\file.txt`);
