@@ -215,6 +215,23 @@ function parseJson(str) {
     return `Invalid Json: ${error}`;
   }
 }
-console.log(parseJson('{name:"hassan" }'));
+console.log(parseJson('{name:"jisan" }'));
 
 //___________________________________________________________________________
+
+// 8. What is the purpose of throw in JavaScript?
+// - It creates a new error manually
+
+// 9. What does the finally block do in a try...catch statement?
+// - Runs regardless of whether an error occurs or not
+
+// 10. Create a table explaining the usages
+// of try, catch, throw, rethrow, error object
+
+/*
+  try : try block let you take the code that throws the error
+  catch : catch block does when try throws error it will handle that error 
+  throw : throw keyword let you throw the error to the catch block and create your own exception error.
+  rethrow : Rethrowing involves catching an error, processing it to some extent, and then throwing it again so that a higher-level function can handle it.
+  error object : contains the info of the error like name message and the stack 
+*/
